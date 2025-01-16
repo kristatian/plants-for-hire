@@ -1,11 +1,19 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: beige;
+    background-color: #eceff4;
+}
+
+#dark-mode-btn {
+    border-radius: 5px;
+    border-width: 3px;
+    position: fixed;
+    left: 100%;
+    margin-top: 20px;
+    margin-left: -70px;
 }
 
 .main-text {
     font-size: 60px;
-    color: #332727;
     font-weight: 600;
     position: fixed;
     top: 50%;

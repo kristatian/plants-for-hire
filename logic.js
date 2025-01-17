@@ -18,8 +18,9 @@ function setTheme(backgroundColour, textColour) {
     // background colour
     document.body.style.backgroundColor = backgroundColour;
     document.body.style.transition = "background-color 0.5s";
-    // background colour of button
+    // button colours
     document.getElementById("dark-mode-btn").style.backgroundColor = backgroundColour;
+    document.getElementById("dark-mode-btn").style.borderColor = backgroundColour;
     // text colour
     document.getElementById("text").style.color = textColour;
     document.getElementById("text").style.transition = "color 0.5s";

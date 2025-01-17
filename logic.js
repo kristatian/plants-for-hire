@@ -1,26 +1,28 @@
+// https://kristatian.github.io/plants-for-hire/
 
 function toggleDarkMode() {
     const currentMode = document.getElementById("dark-mode-btn-img").getAttribute("alt");
     console.log(currentMode);
-    currentMode === "wakege" ? setDarkMode() : setLightMode();
+    currentMode === "wakege" ? setTheme("#2e3440", "#eceff4") : setTheme("#eceff4", "#2e3440");
 }
 
-function setDarkMode() {
+function setTheme(backgroundColour, textColour) {
     const img = document.getElementById("dark-mode-btn-img");
-    img.src = "./assets/bedge.png";
-    img.alt = "bedge";
-    document.body.style.backgroundColor = "#2e3440";
-    document.getElementById("dark-mode-btn").style.backgroundColor = "#2e3440";
-    document.getElementById("text").style.color = "#eceff4";
-}
-
-function setLightMode() {
-    const img = document.getElementById("dark-mode-btn-img");
-    img.src = "./assets/wakege.png";
-    img.alt = "wakege";
-    document.body.style.backgroundColor = "#eceff4";
-    document.getElementById("dark-mode-btn").style.backgroundColor = "#eceff4";
-    document.getElementById("text").style.color = "#2e3440";
+    if (textColour === "#eceff4") {
+        img.src = "./assets/bedge.png";
+        img.alt = "bedge";
+    } else {
+        img.src = "./assets/wakege.png";
+        img.alt = "wakege";
+    }
+    // background colour
+    document.body.style.backgroundColor = backgroundColour;
+    document.body.style.transition = "background-color 0.5s";
+    // background colour of button
+    document.getElementById("dark-mode-btn").style.backgroundColor = backgroundColour;
+    // text colour
+    document.getElementById("text").style.color = textColour;
+    document.getElementById("text").style.transition = "color 0.5s";
 }
 
 function getAdj() {

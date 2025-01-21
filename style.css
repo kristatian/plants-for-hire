@@ -23,7 +23,7 @@ body {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: auto;
+    width: max-content;
     height: auto;
     transform: translate(-50%,-50%);
 }
@@ -34,4 +34,58 @@ span {
 
 .loadest {
     align-self: center;
+}
+
+/* chat.html styling */
+
+#chat-input {
+    width: 30%;
+    height: 25px;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #d8dee9;
+    padding: 10px;
+    font-size: 20px;
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-15%);
+}
+
+/* need to adjust the btn position to be relative to edge of input space */
+#send-btn {
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #d8dee9;
+    padding: 10px;
+    font-size: 20px;
+    position: absolute;
+    top: 85%;
+    left: 67%;
+    transform: translate(-33%,-15%);
+}
+
+#chat-box {
+    width: 50%;
+    height: 73%;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #d8dee9;
+    padding: 10px;
+    font-size: 20px;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,0);
+    overflow-y: auto;
+}
+
+#chat-box-content p {
+    border: 1px solid #d8dee9;
+    border-radius: 5px;
+    background-color: #d8dee9;
+    margin-top: 25px;
+    padding: 10px 15px;
+    position: relative;
+    width: max-content;
 }

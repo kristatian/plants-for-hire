@@ -27,6 +27,8 @@ function setTheme(backgroundColour, textColour) {
 }
 
 function getAdj() {
+    colours = ["#f94144", "#f3722c", "#f8961e", "#f9c74f", "#90be6d", "#43aa8b", "#577590", '#e27396', '#ff4800', '#86bbd8', '#9bc53d', '#a06cd5'];
+
     fetch('lovely.json').then(response => {
         return response.json();
     }).then(data => {
@@ -45,4 +47,29 @@ function getAdj() {
     });
 }
 
-colours = ["#669900", "#99cc33", "#ccee66", "#006699", "#3399cc", "#990066", "#cc3399", '#ff6600', '#ff9900', '#ffcc00'];
+function generateResponse(message) {
+    var isFound = false;
+    fetch('responses.json').then(response => {
+        return response.json();
+    }).then(data => {
+        data.inputs.forEach(input => {
+            if (input === message) {
+                console.log("found " + input + " at index " + data.inputs.indexOf(message));
+                const responseIndex = data.inputs.indexOf(message);
+                document.getElementById("chat-box-content").innerHTML += "<p>" + data.responses[responseIndex] + "</p>";
+                isFound = true;
+            }
+        })
+    })
+    return isFound;
+}
+
+function sendMessage() {
+    const message = document.getElementById("chat-input").value;
+    document.getElementById("chat-box-content").innerHTML += "<p>" + message + "</p>";
+    const response = generateResponse(message);
+    console.log(response);
+    if (!response) {
+        document.getElementById("chat-box-content").innerHTML += "<p>" + "Me personally, I really like Mr. William" + "</p>";
+    }
+}

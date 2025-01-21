@@ -12,13 +12,17 @@
     <button id="dark-mode-btn" onclick="toggleDarkMode()">
         <img id="dark-mode-btn-img" src="assets/wakege.png" alt="wakege">
     </button>
-    <a href="chat.html">
-        <button>Chatter</button>
+    <a href="index.html">
+        <button>Home</button>
     </a>
-    <div class="main-text">
-        <p id="text">I love Mr.William the <span id="adj-to-replace" onclick="getAdj()"
-                style="text-decoration: underline;">most</span>est</p>
+    <div id="chat-box">
+        <div id="chat-box-content">
+
+        </div>
     </div>
+    <input type="text" id="chat-input" placeholder="Type your message here" onsubmit="
+    sendMessage()">
+    <button id="send-btn" onclick="sendMessage()">Send</button>
     <script src="logic.js">
     </script>
 </body>

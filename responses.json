@@ -1,10 +1,18 @@
 {
     "inputs": [
         "Bought",
-        "Hello!"
+        "Hello!",
+        "Do you love me?",
+        "Are you sure?",
+        "Yay!",
+        "Me personally, I really like Mr.Krista"
     ],
     "responses": [
         "Bought!",
-        "Hello! Hello!"
+        "Hello! Hello!",
+        "Yes I love you very much!",
+        "Yes I very sure",
+        "Yay!!",
+        "No I don't like it!"
     ]
 }

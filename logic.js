@@ -47,29 +47,44 @@ function getAdj() {
     });
 }
 
-function generateResponse(message) {
+async function generateResponse(message) {
+    const response = await fetch('responses.json');
+    const data = await response.json();
     var isFound = false;
-    fetch('responses.json').then(response => {
-        return response.json();
-    }).then(data => {
-        data.inputs.forEach(input => {
-            if (input === message) {
-                console.log("found " + input + " at index " + data.inputs.indexOf(message));
-                const responseIndex = data.inputs.indexOf(message);
-                document.getElementById("chat-box-content").innerHTML += "<p>" + data.responses[responseIndex] + "</p>";
-                isFound = true;
-            }
-        })
+
+    console.log(data);
+    var chatbox = document.getElementById("chat-box-content");
+    let kristaReply = document.createElement("p");
+    kristaReply.classList.add('kristaReply');
+
+    data.inputs.forEach(input => {
+        if (input === message) {
+            console.log("found " + input + " at index " + data.inputs.indexOf(message));
+            const responseIndex = data.inputs.indexOf(message);
+            kristaReply.innerHTML = data.responses[responseIndex];
+            chatbox.appendChild(kristaReply);
+            isFound = true;
+        }
     })
     return isFound;
 }
 
-function sendMessage() {
+async function sendMessage() {
     const message = document.getElementById("chat-input").value;
-    document.getElementById("chat-box-content").innerHTML += "<p>" + message + "</p>";
-    const response = generateResponse(message);
+    var chatbox = document.getElementById("chat-box-content");
+
+    let userInput = document.createElement("p");
+    userInput.classList.add('userInput');
+    userInput.innerHTML = message;
+    chatbox.appendChild(userInput);
+
+    let kristaReply = document.createElement("p");
+    kristaReply.classList.add('kristaReply');
+
+    const response = await generateResponse(message);
     console.log(response);
     if (!response) {
-        document.getElementById("chat-box-content").innerHTML += "<p>" + "Me personally, I really like Mr. William" + "</p>";
+        kristaReply.innerHTML = "Me personally, I really like Mr. William";
+        chatbox.appendChild(kristaReply);
     }
 }

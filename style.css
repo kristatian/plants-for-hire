@@ -71,7 +71,7 @@ span {
     border-radius: 5px;
     border-width: 2px;
     border-color: #d8dee9;
-    padding: 10px;
+    padding: 20px;
     font-size: 20px;
     position: fixed;
     top: 5%;
@@ -80,12 +80,28 @@ span {
     overflow-y: auto;
 }
 
-#chat-box-content p {
+#chat-box-content {
+    height: fit-content;
+}
+
+.userInput {
+    border: 1px solid #8ba8df;
+    border-radius: 5px;
+    background-color: #8ba8df;
+    margin-top: 25px;
+    padding: 10px 10px;
+    position: relative;
+    width: max-content;
+    justify-self: end;
+}
+
+.kristaReply {
     border: 1px solid #d8dee9;
     border-radius: 5px;
     background-color: #d8dee9;
     margin-top: 25px;
-    padding: 10px 15px;
+    padding: 10px 10px;
     position: relative;
     width: max-content;
+    justify-self: start;
 }

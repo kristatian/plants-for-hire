@@ -1,0 +1,44 @@
+body {
+    font-family: 'Arial Rounded MT', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eceff4;
+}
+
+#dark-mode-btn {
+    border-radius: 5px;
+    border-width: 3px;
+    position: fixed;
+    left: 100%;
+    margin-top: 20px;
+    margin-left: -80px;
+    border-color: #eceff4;
+}
+
+#main-img {
+    width: 400px;
+    position: fixed;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -20%);
+}
+
+#game-table {
+    height: max-content;
+    width: max-content;
+    position: fixed;
+    left: 50%;
+    top: 75%;
+    transform: translate(-50%, -75%);
+}
+
+#game-headers th {
+    background-color: blue;
+}
+
+
+#game-table th {
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+}

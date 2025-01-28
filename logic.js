@@ -1,4 +1,5 @@
 // https://kristatian.github.io/plants-for-hire/
+// faker faker baby maker --> liar liar plants for hire
 
 function toggleDarkMode() {
     const currentMode = document.getElementById("dark-mode-btn-img").getAttribute("alt");

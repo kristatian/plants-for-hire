@@ -13,6 +13,24 @@ body {
     border-color: #eceff4;
 }
 
+#chat-btn {
+    border-radius: 5px;
+    border-width: 3px;
+    position: fixed;
+    left: 1%;
+    margin-top: 20px;
+    border-color: #eceff4;
+}
+
+#home-btn {
+    border-radius: 5px;
+    border-width: 3px;
+    position: fixed;
+    left: 1%;
+    margin-top: 20px;
+    border-color: #eceff4;
+}
+
 #adj-to-replace {
     cursor: pointer;
 }
@@ -38,18 +56,23 @@ span {
 
 /* chat.html styling */
 
-#chat-input {
-    width: 30%;
+#user-input-area {
+    display: inline;
+    width: max-content;
     height: 25px;
-    border-radius: 5px;
-    border-width: 2px;
-    border-color: #d8dee9;
-    padding: 10px;
-    font-size: 20px;
     position: fixed;
     top: 85%;
     left: 50%;
     transform: translate(-50%,-15%);
+}
+
+#chat-input {
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #d8dee9;
+    width: 400px;
+    padding: 10px;
+    font-size: 20px;
 }
 
 /* need to adjust the btn position to be relative to edge of input space */
@@ -59,18 +82,15 @@ span {
     border-color: #d8dee9;
     padding: 10px;
     font-size: 20px;
-    position: absolute;
-    top: 85%;
-    left: 67%;
-    transform: translate(-33%,-15%);
 }
 
 #chat-box {
-    width: 50%;
+    width: 40%;
     height: 73%;
-    border-radius: 5px;
+    border-radius: 15px;
     border-width: 2px;
     border-color: #d8dee9;
+    background-color: #ffffff;
     padding: 20px;
     font-size: 20px;
     position: fixed;
@@ -91,7 +111,8 @@ span {
     margin-top: 25px;
     padding: 10px 10px;
     position: relative;
-    width: max-content;
+    width: auto;
+    max-width: 70%;
     justify-self: end;
 }
 
@@ -102,6 +123,7 @@ span {
     margin-top: 25px;
     padding: 10px 10px;
     position: relative;
-    width: max-content;
+    width: auto;
+    max-width: 70%;
     justify-self: start;
 }

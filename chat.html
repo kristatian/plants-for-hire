@@ -13,17 +13,18 @@
         <img id="dark-mode-btn-img" src="assets/wakege.png" alt="wakege">
     </button>
     <a href="index.html">
-        <button>Home</button>
-    </a>
-    <a href="datedle.html">
-        <button>Datedle</button>
+        <button id="home-btn">
+            <img id="home-btn-img" src="assets/hypers.png" alt="home">
+        </button>
     </a>
     <div id="chat-box">
         <div id="chat-box-content"></div>
         <div id="chat-box-response"></div>
     </div>
-    <input type="text" id="chat-input" placeholder="Type your message here" onsubmit="sendMessage()">
-    <button id="send-btn" onclick="sendMessage()">Send</button>
+    <div id="user-input-area">
+        <input type="text" id="chat-input" placeholder="Type your message here" onsubmit="sendMessage()">
+        <button id="send-btn" onclick="sendMessage()">Send</button>
+    </div>
     <script src="logic.js">
     </script>
 </body>

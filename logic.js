@@ -20,8 +20,22 @@ function setTheme(backgroundColour, textColour) {
     document.body.style.backgroundColor = backgroundColour;
     document.body.style.transition = "background-color 0.5s";
     // button colours
+    if (backgroundColour == "#2e3440") {
+        document.getElementById("chat-box").style.backgroundColor = "#1d1d1d";
+        document.getElementById("chat-box").style.transition = "background-color 0.5s";
+    } else {
+        document.getElementById("chat-box").style.backgroundColor = "#ffffff";
+        document.getElementById("chat-box").style.transition = "background-color 0.5s";
+    }
+    // button colours
     document.getElementById("dark-mode-btn").style.backgroundColor = backgroundColour;
     document.getElementById("dark-mode-btn").style.borderColor = backgroundColour;
+    // button colours
+    document.getElementById("home-btn").style.backgroundColor = backgroundColour;
+    document.getElementById("home-btn").style.borderColor = backgroundColour;
+    // button colours
+    document.getElementById("chat-btn").style.backgroundColor = backgroundColour;
+    document.getElementById("chat-btn").style.borderColor = backgroundColour;
     // text colour
     document.getElementById("text").style.color = textColour;
     document.getElementById("text").style.transition = "color 0.5s";

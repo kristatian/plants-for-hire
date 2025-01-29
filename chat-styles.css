@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial Rounded MT', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eceff4;
+}
+
+#dark-mode-btn {
+    border-radius: 5px;
+    border-width: 3px;
+    position: fixed;
+    left: 100%;
+    margin-top: 20px;
+    margin-left: -80px;
+    border-color: #eceff4;
+}
+
+#chat-btn {
+    border-radius: 5px;
+    border-width: 3px;
+    position: fixed;
+    left: 1%;
+    margin-top: 20px;
+    border-color: #eceff4;
+}
+
+#home-btn {
+    border-radius: 5px;
+    border-width: 3px;
+    position: fixed;
+    left: 1%;
+    margin-top: 20px;
+    border-color: #eceff4;
+}
+
+/* chat.html styling */
+
+#user-input-area {
+    display: inline;
+    width: max-content;
+    height: 25px;
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-15%);
+}
+
+#chat-input {
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #d8dee9;
+    width: 400px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* need to adjust the btn position to be relative to edge of input space */
+#send-btn {
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: #d8dee9;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#chat-box {
+    width: 40%;
+    height: 73%;
+    border-radius: 15px;
+    border-width: 2px;
+    border-color: #d8dee9;
+    background-color: #ffffff;
+    padding: 20px;
+    font-size: 20px;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,0);
+    overflow-y: auto;
+}
+
+#chat-box-content {
+    height: fit-content;
+}
+
+.userInput {
+    border: 1px solid #8ba8df;
+    border-radius: 5px;
+    background-color: #8ba8df;
+    margin-top: 25px;
+    padding: 10px 10px;
+    position: relative;
+    width: auto;
+    max-width: 70%;
+    justify-self: end;
+}
+
+.kristaReply {
+    border: 1px solid #d8dee9;
+    border-radius: 5px;
+    background-color: #d8dee9;
+    margin-top: 25px;
+    padding: 10px 10px;
+    position: relative;
+    width: auto;
+    max-width: 70%;
+    justify-self: start;
+}

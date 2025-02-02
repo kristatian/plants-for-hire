@@ -52,7 +52,6 @@ body {
     font-size: 20px;
 }
 
-/* need to adjust the btn position to be relative to edge of input space */
 #send-btn {
     border-radius: 5px;
     border-width: 2px;

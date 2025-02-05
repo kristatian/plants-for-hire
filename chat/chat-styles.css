@@ -6,16 +6,20 @@
     --border-color: var(--background-color);
     --user-input-box: #8ba8df;
     --krista-response-box: #d8dee9;
+    --bubble-bg: #e0e0e0;
+    --bubble-color: #8d8d8d;
 }
 
 .dark-mode {
     --background-color: #2e3440;
     --text-color: #eceff4;
     --button-bg: var(--background-color);
-    --chat-bg: black;
+    --chat-bg: #222730;
     --border-color: var(--background-color);
-    --user-input-box: #8ba8df;
-    --krista-response-box: #d8dee9;
+    --user-input-box: #323f57;
+    --krista-response-box: #2e3440;
+    --bubble-bg: #353535;
+    --bubble-color: #525252;
 }
 
 body {
@@ -43,6 +47,7 @@ body {
     left: 1%;
     margin-top: 20px;
     border-color: var(--border-color);
+    background-color: var(--button-bg);
 }
 
 #home-btn {
@@ -76,6 +81,8 @@ body {
     border-radius: 5px;
     border-width: 2px;
     border-color: var(--border-color);
+    background-color: var(--chat-bg);
+    color: var(--text-color);
     width: 35vw;
     padding: 10px;
     font-size: 20px;
@@ -85,8 +92,14 @@ body {
     border-radius: 5px;
     border-width: 2px;
     border-color: var(--border-color);
+    background-color: var(--chat-bg);
+    color: var(--text-color);
     padding: 10px;
     font-size: 20px;
+}
+
+#send-btn:hover {
+    opacity: 80%;
 }
 
 #chat-box {
@@ -105,22 +118,6 @@ body {
     transform: translate(-50%, 0);
     overflow-y: auto;
 }
-
-/* #chat-box {
-    width: 40%;
-    height: 73%;
-    border-radius: 15px;
-    border-width: 2px;
-    border-color: #d8dee9;
-    background-color: #ffffff;
-    padding: 20px;
-    font-size: 20px;
-    position: fixed;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%,0);
-    overflow-y: auto;
-} */
 
 #chat-box-content {
     height: fit-content;
@@ -145,15 +142,7 @@ body {
 }
 
 .half.light .typing-bubble {
-    background-color: #e0e0e0;
-}
-
-.half.dark {
-    background-color: #262626;
-}
-
-.half.dark .typing {
-    background-color: #525252;
+    background-color: var(--bubble-bg);
 }
 
 .typing-bubble {
@@ -172,7 +161,7 @@ body {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #8d8d8d;
+    background-color: var(--bubble-color);
     margin: 3px;
 }
 

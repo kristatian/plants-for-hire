@@ -33,21 +33,27 @@ body {
 
 /* chat.html styling */
 
+#main-content {
+    background-color: #746297;
+    width: max-content;
+    height: max-content;
+}
+
 #user-input-area {
     display: inline;
     width: max-content;
-    height: 25px;
+    height: 5vh;
     position: fixed;
     top: 85%;
     left: 50%;
-    transform: translate(-50%,-15%);
+    transform: translate(-50%, -15%);
 }
 
 #chat-input {
     border-radius: 5px;
     border-width: 2px;
     border-color: #d8dee9;
-    width: 400px;
+    width: 35vw;
     padding: 10px;
     font-size: 20px;
 }
@@ -61,6 +67,23 @@ body {
 }
 
 #chat-box {
+    width: 50vw;
+    max-width: 700px;
+    height: 70vh;
+    border-radius: 15px;
+    border-width: 2px;
+    border-color: #d8dee9;
+    background-color: #ffffff;
+    padding: 20px 50px;
+    font-size: 20px;
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow-y: auto;
+}
+
+/* #chat-box {
     width: 40%;
     height: 73%;
     border-radius: 15px;
@@ -74,7 +97,7 @@ body {
     left: 50%;
     transform: translate(-50%,0);
     overflow-y: auto;
-}
+} */
 
 #chat-box-content {
     height: fit-content;
@@ -92,6 +115,97 @@ body {
     justify-self: end;
 }
 
+.half {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.half.light .typing-bubble {
+    background-color: #e0e0e0;
+}
+
+.half.dark {
+    background-color: #262626;
+}
+
+.half.dark .typing {
+    background-color: #525252;
+}
+
+.typing-bubble {
+    display: block;
+    width: 60px;
+    height: 40px;
+    border-radius: 20px;
+    margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #8d8d8d;
+    margin: 3px;
+}
+
+.circle.bouncing {
+    animation: bounce 1000ms ease-in-out infinite;
+    animation-delay: 3600ms;
+}
+
+.circle:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+.circle:nth-child(2) {
+    animation-delay: 333ms;
+}
+
+.circle:nth-child(3) {
+    animation-delay: 666ms;
+}
+
+@keyframes typing-bubble {
+    0% {
+        transform: scale(1);
+    }
+
+    33% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    33% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .kristaReply {
     border: 1px solid #d8dee9;
     border-radius: 5px;
@@ -100,6 +214,28 @@ body {
     padding: 10px 10px;
     position: relative;
     width: auto;
-    max-width: 70%;
     justify-self: start;
+}
+
+.typewriter-container {
+    width: max-content;
+    max-width: 70%;
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    animation:
+        typing 3.5s steps(40, end);
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }

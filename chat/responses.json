@@ -1,0 +1,22 @@
+{
+    "inputs": [
+        "bought",
+        "hello!",
+        "do you love me?",
+        "are you sure?",
+        "yay!",
+        "me personally, i really like mr.krista",
+        "i love you",
+        "stop hating!"
+    ],
+    "responses": [
+        "Bought!",
+        "Hello! Hello!",
+        "Yes I love you very much!",
+        "Yes I very sure",
+        "Yay!!",
+        "No I don't like it!",
+        "I love you too!",
+        "I'm not hating!"
+    ]
+}

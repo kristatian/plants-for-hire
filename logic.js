@@ -7,14 +7,24 @@ function toggleDarkMode() {
     currentMode === "wakege" ? setTheme("#2e3440", "#eceff4") : setTheme("#eceff4", "#2e3440");
 }
 
+function loadTheme() {
+    var textColor = sessionStorage.getItem("textColor");
+    var backgroundColor = sessionStorage.getItem("backgroundColor");
+    setTheme(backgroundColor, textColor);
+}
+
 function setTheme(backgroundColour, textColour) {
     const img = document.getElementById("dark-mode-btn-img");
     if (textColour === "#eceff4") {
         img.src = "./assets/bedge.png";
         img.alt = "bedge";
+        sessionStorage.setItem("textColor", "#eceff4");
+        sessionStorage.setItem("backgroundColor", "#2e3440");
     } else {
         img.src = "./assets/wakege.png";
         img.alt = "wakege";
+        sessionStorage.setItem("textColor", "#2e3440");
+        sessionStorage.setItem("backgroundColor", "#eceff4");
     }
     // background colour
     document.body.style.backgroundColor = backgroundColour;

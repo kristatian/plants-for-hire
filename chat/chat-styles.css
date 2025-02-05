@@ -121,6 +121,7 @@ body {
 
 #chat-box-content {
     height: fit-content;
+    display: grid;
 }
 
 .userInput {

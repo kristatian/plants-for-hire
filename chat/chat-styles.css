@@ -102,6 +102,11 @@ body {
     opacity: 80%;
 }
 
+#chat-box-content {
+    height: fit-content;
+    display: grid;
+}
+
 #chat-box {
     width: 50vw;
     max-width: 700px;
@@ -117,11 +122,6 @@ body {
     left: 50%;
     transform: translate(-50%, 0);
     overflow-y: auto;
-}
-
-#chat-box-content {
-    height: fit-content;
-    display: grid;
 }
 
 .userInput {

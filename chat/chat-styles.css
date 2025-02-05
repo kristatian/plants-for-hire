@@ -1,6 +1,28 @@
+:root {
+    --background-color: #eceff4;
+    --text-color: #2e3440;
+    --button-bg: var(--background-color);
+    --chat-bg: white;
+    --border-color: var(--background-color);
+    --user-input-box: #8ba8df;
+    --krista-response-box: #d8dee9;
+}
+
+.dark-mode {
+    --background-color: #2e3440;
+    --text-color: #eceff4;
+    --button-bg: var(--background-color);
+    --chat-bg: black;
+    --border-color: var(--background-color);
+    --user-input-box: #8ba8df;
+    --krista-response-box: #d8dee9;
+}
+
 body {
     font-family: 'Arial Rounded MT', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #eceff4;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #dark-mode-btn {
@@ -10,7 +32,8 @@ body {
     left: 100%;
     margin-top: 20px;
     margin-left: -80px;
-    border-color: #eceff4;
+    border-color: var(--border-color);
+    background-color: var(--button-bg);
 }
 
 #chat-btn {
@@ -19,7 +42,7 @@ body {
     position: fixed;
     left: 1%;
     margin-top: 20px;
-    border-color: #eceff4;
+    border-color: var(--border-color);
 }
 
 #home-btn {
@@ -28,13 +51,13 @@ body {
     position: fixed;
     left: 1%;
     margin-top: 20px;
-    border-color: #eceff4;
+    border-color: var(--border-color);
+    background-color: var(--button-bg);
 }
 
 /* chat.html styling */
 
 #main-content {
-    background-color: #746297;
     width: max-content;
     height: max-content;
 }
@@ -52,7 +75,7 @@ body {
 #chat-input {
     border-radius: 5px;
     border-width: 2px;
-    border-color: #d8dee9;
+    border-color: var(--border-color);
     width: 35vw;
     padding: 10px;
     font-size: 20px;
@@ -61,7 +84,7 @@ body {
 #send-btn {
     border-radius: 5px;
     border-width: 2px;
-    border-color: #d8dee9;
+    border-color: var(--border-color);
     padding: 10px;
     font-size: 20px;
 }
@@ -72,8 +95,8 @@ body {
     height: 70vh;
     border-radius: 15px;
     border-width: 2px;
-    border-color: #d8dee9;
-    background-color: #ffffff;
+    border-color: var(--border-color);
+    background-color: var(--chat-bg);
     padding: 20px 50px;
     font-size: 20px;
     position: fixed;
@@ -104,9 +127,9 @@ body {
 }
 
 .userInput {
-    border: 1px solid #8ba8df;
+    border: 1px solid var(--user-input-box);
     border-radius: 5px;
-    background-color: #8ba8df;
+    background-color: var(--user-input-box);
     margin-top: 25px;
     padding: 10px 10px;
     position: relative;
@@ -207,9 +230,9 @@ body {
 }
 
 .kristaReply {
-    border: 1px solid #d8dee9;
+    border: 1px solid var(--krista-response-box);
     border-radius: 5px;
-    background-color: #d8dee9;
+    background-color: var(--krista-response-box);
     margin-top: 25px;
     padding: 10px 10px;
     position: relative;

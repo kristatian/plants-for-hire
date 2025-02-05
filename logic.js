@@ -1,43 +1,30 @@
 // https://kristatian.github.io/plants-for-hire/
 // faker faker baby maker --> liar liar plants for hire
 
+window.onload = function () {
+    if (sessionStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark-mode");
+    }
+}
+
 function toggleDarkMode() {
     const currentMode = document.getElementById("dark-mode-btn-img").getAttribute("alt");
     console.log(currentMode);
-    currentMode === "wakege" ? setTheme("#2e3440", "#eceff4") : setTheme("#eceff4", "#2e3440");
-}
 
-function loadTheme() {
-    var textColor = sessionStorage.getItem("textColor");
-    var backgroundColor = sessionStorage.getItem("backgroundColor");
-    setTheme(backgroundColor, textColor);
-}
-
-function setTheme(backgroundColour, textColour) {
     const img = document.getElementById("dark-mode-btn-img");
-    if (textColour === "#eceff4") {
-        img.src = "./assets/bedge.png";
+    if (currentMode === "wakege") {
+        img.src = "../assets/bedge.png";
         img.alt = "bedge";
-        sessionStorage.setItem("textColor", "#eceff4");
-        sessionStorage.setItem("backgroundColor", "#2e3440");
     } else {
-        img.src = "./assets/wakege.png";
+        img.src = "../assets/wakege.png";
         img.alt = "wakege";
-        sessionStorage.setItem("textColor", "#2e3440");
-        sessionStorage.setItem("backgroundColor", "#eceff4");
     }
-    // background colour
-    document.body.style.backgroundColor = backgroundColour;
-    document.body.style.transition = "background-color 0.5s";
-    // button colours
-    document.getElementById("dark-mode-btn").style.backgroundColor = backgroundColour;
-    document.getElementById("dark-mode-btn").style.borderColor = backgroundColour;
-    // button colours
-    document.getElementById("chat-btn").style.backgroundColor = backgroundColour;
-    document.getElementById("chat-btn").style.borderColor = backgroundColour;
-    // text colour
-    document.getElementById("text").style.color = textColour;
-    document.getElementById("text").style.transition = "color 0.5s";
+
+    // toggle adds class if doesn't exist, removes if exists
+    // returns true if added, false if removed
+    // documentElement returns root node (:root)
+    const isDarkMode = document.documentElement.classList.toggle("dark-mode");
+    sessionStorage.setItem("theme", isDarkMode ? "dark" : "light");
 }
 
 function getAdj() {

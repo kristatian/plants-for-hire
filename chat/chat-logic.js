@@ -4,50 +4,21 @@
 function toggleDarkMode() {
     const currentMode = document.getElementById("dark-mode-btn-img").getAttribute("alt");
     console.log(currentMode);
-    currentMode === "wakege" ? setTheme("#2e3440", "#eceff4") : setTheme("#eceff4", "#2e3440");
-}
 
-function loadTheme() {
-    var textColor = sessionStorage.getItem("textColor");
-    var backgroundColor = sessionStorage.getItem("backgroundColor");
-    setTheme(backgroundColor, textColor);
-}
-
-function setTheme(backgroundColour, textColour) {
     const img = document.getElementById("dark-mode-btn-img");
-    if (textColour === "#eceff4") {
+    if (currentMode === "wakege") {
         img.src = "../assets/bedge.png";
         img.alt = "bedge";
-        sessionStorage.setItem("textColor", "#eceff4");
-        sessionStorage.setItem("backgroundColor", "#2e3440");
     } else {
         img.src = "../assets/wakege.png";
         img.alt = "wakege";
-        sessionStorage.setItem("textColor", "#2e3440");
-        sessionStorage.setItem("backgroundColor", "#eceff4");
     }
 
-    // background colour
-    document.body.style.backgroundColor = backgroundColour;
-    document.body.style.transition = "background-color 0.5s";
-
-    // chat box colours
-    if (backgroundColour == "#2e3440") {
-        document.getElementById("chat-box").style.backgroundColor = "#1d1d1d";
-        document.getElementById("chat-box").style.transition = "background-color 0.5s";
-    } else {
-        document.getElementById("chat-box").style.backgroundColor = "#ffffff";
-        document.getElementById("chat-box").style.transition = "background-color 0.5s";
-    }
-    // button colours
-    document.getElementById("dark-mode-btn").style.backgroundColor = backgroundColour;
-    document.getElementById("dark-mode-btn").style.borderColor = backgroundColour;
-    // button colours
-    document.getElementById("home-btn").style.backgroundColor = backgroundColour;
-    document.getElementById("home-btn").style.borderColor = backgroundColour;
-    // text colour
-    document.body.style.color = textColour;
-    document.body.style.transition = "color 0.5s";
+    // toggle adds class if doesn't exist, removes if exists
+    // returns true if added, false if removed
+    // documentElement returns root node (:root)
+    const isDarkMode = document.documentElement.classList.toggle("dark-mode");
+    sessionStorage.setItem("theme", isDarkMode ? "dark" : "light");
 }
 
 async function generateResponse(message) {

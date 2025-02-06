@@ -61,6 +61,7 @@ async function sendMessage() {
 
     let kristaReply = document.createElement("p");
     kristaReply.classList.add('typewriter');
+    kristaReply.classList.add('kristaReply');
 
     let typewriterContainer = document.createElement("div");
     typewriterContainer.classList.add('typewriter-container');

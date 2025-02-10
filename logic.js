@@ -6,7 +6,7 @@ window.onload = function () {
 
     console.log("theme is: " + localStorage.getItem("theme"))
     if (localStorage.getItem("theme") === "light") {
-        img.src = "/assets/wakege.png";
+        img.src = "assets/wakege.png";
     } else {
         img.src = localStorage.getItem("icon-path");
     }

@@ -239,7 +239,6 @@ body {
     position: relative;
     width: auto;
     justify-self: start;
-    border: 1px solid var(--krista-response-box);
     margin: 0px;
 }
 

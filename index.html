@@ -18,9 +18,9 @@
         document.addEventListener("DOMContentLoaded", function () {
             if (localStorage.getItem("theme") === "dark") {
                 // Set the correct image source before rendering
-                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "../assets/bedge.png";
+                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "plants-for-hire/assets/bedge.png";
             } else {
-                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "../assets/wakege.png";
+                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "plants-for-hire/assets/wakege.png";
             }
         });
     </script>
@@ -29,11 +29,11 @@
 <body onload="loadTheme()">
     <div id="all-content">
         <button id="dark-mode-btn" onclick="toggleDarkMode()">
-            <img id="dark-mode-btn-img" src="assets/wakege.png" alt="wakege">
+            <img id="dark-mode-btn-img" src="plants-for-hire/assets/wakege.png" alt="wakege">
         </button>
         <a href="./chat/chat.html">
             <button id="chat-btn">
-                <img id="chat-btn-img" src="assets/chatting.gif" alt="chat">
+                <img id="chat-btn-img" src="plants-for-hire/assets/chatting.gif" alt="chat">
             </button>
         </a>
         <div class="main-text">

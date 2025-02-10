@@ -7,12 +7,6 @@
     <title>Plants for Hire</title>
     <link rel="stylesheet" href="chat-styles.css">
     <script>
-        console.log("theme is: ");
-
-        if (localStorage.getItem("theme") === null) {
-            localStorage.setItem("theme", "light")
-        }
-
         if (localStorage.getItem("theme") === "dark") {
             document.documentElement.classList.add("dark-mode");
         }

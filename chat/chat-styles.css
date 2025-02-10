@@ -13,7 +13,7 @@
     --krista-response-box: #d8dee9;
     --bubble-bg: #e0e0e0;
     --bubble-color: #8d8d8d;
-    --theme-btn-img: url(../assets/wakege.png);
+    --theme-btn-img: url(assets/wakege.png);
 }
 
 .dark-mode {
@@ -26,7 +26,7 @@
     --krista-response-box: #2e3440;
     --bubble-bg: #353535;
     --bubble-color: #525252;
-    --theme-btn-img: url(../assets/bedge.png);
+    --theme-btn-img: url(assets/bedge.png);
 }
 
 body {

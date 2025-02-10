@@ -7,19 +7,34 @@
     <title>Plants for Hire</title>
     <link rel="stylesheet" href="chat-styles.css">
     <script>
-        if (sessionStorage.getItem("theme") === "dark") {
+        console.log("theme is: ");
+
+        if (localStorage.getItem("theme") === null) {
+            localStorage.setItem("theme", "light")
+        }
+
+        if (localStorage.getItem("theme") === "dark") {
             document.documentElement.classList.add("dark-mode");
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (localStorage.getItem("theme") === "dark") {
+                // Set the correct image source before rendering
+                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "/assets/bedge.png";
+            } else {
+                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "/assets/wakege.png";
+            }
+        });
     </script>
 </head>
 
 <body>
     <button id="dark-mode-btn" onclick="toggleDarkMode()">
-        <img id="dark-mode-btn-img" src="../assets/wakege.png" alt="wakege">
+        <img id="dark-mode-btn-img" src="/assets/wakege.png" alt="wakege">
     </button>
     <a href="../index.html">
         <button id="home-btn">
-            <img id="home-btn-img" src="../assets/hypers.png" alt="home">
+            <img id="home-btn-img" src="/assets/hypers.png" alt="home">
         </button>
     </a>
     <div id="main-content">

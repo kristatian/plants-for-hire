@@ -1,24 +1,27 @@
 // https://kristatian.github.io/plants-for-hire/
 // faker faker baby maker --> liar liar plants for hire
 
-function toggleDarkMode() {
-    const currentMode = document.getElementById("dark-mode-btn-img").getAttribute("alt");
-    console.log(currentMode);
-
+window.onload = function () {
     const img = document.getElementById("dark-mode-btn-img");
-    if (currentMode === "wakege") {
-        img.src = "../assets/bedge.png";
-        img.alt = "bedge";
+    if (localStorage.getItem("theme") === "light") {
+        img.src = "/assets/wakege.png";
     } else {
-        img.src = "../assets/wakege.png";
-        img.alt = "wakege";
+        img.src = localStorage.getItem("icon-path");
     }
+};
+
+function toggleDarkMode() {
+    const img = document.getElementById("dark-mode-btn-img");
+    img.src = localStorage.getItem("icon-path");
 
     // toggle adds class if doesn't exist, removes if exists
     // returns true if added, false if removed
     // documentElement returns root node (:root)
     const isDarkMode = document.documentElement.classList.toggle("dark-mode");
-    sessionStorage.setItem("theme", isDarkMode ? "dark" : "light");
+    localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+    localStorage.setItem("icon-path", isDarkMode ? "/assets/bedge.png" : "/assets/wakege.png");
+    img.src = localStorage.getItem("icon-path");
+
 }
 
 async function generateResponse(message) {
@@ -66,7 +69,6 @@ async function sendMessage() {
     let typewriterContainer = document.createElement("div");
     typewriterContainer.classList.add('typewriter-container');
 
-
     var chatbox = document.getElementById("chat-box-content");
     let bubbleStyle = document.createElement("div");
     bubbleStyle.classList.add("half");
@@ -102,5 +104,15 @@ async function sendMessage() {
         kristaReply.innerHTML = "Me personally, I really like Mr. William";
         chatbox.appendChild(typewriterContainer);
         typewriterContainer.appendChild(kristaReply);
+
     }
+    await new Promise(resolve => {
+        setTimeout(() => {
+            const elements = document.getElementsByClassName("typewriter");
+            for (let element of elements) {
+                element.classList.add("done");
+            }
+            resolve();
+        }, 4000);
+    });
 }

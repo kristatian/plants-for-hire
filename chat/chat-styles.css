@@ -13,6 +13,7 @@
     --krista-response-box: #d8dee9;
     --bubble-bg: #e0e0e0;
     --bubble-color: #8d8d8d;
+    --theme-btn-img: url(../assets/wakege.png);
 }
 
 .dark-mode {
@@ -25,6 +26,7 @@
     --krista-response-box: #2e3440;
     --bubble-bg: #353535;
     --bubble-color: #525252;
+    --theme-btn-img: url(../assets/bedge.png);
 }
 
 body {
@@ -33,6 +35,10 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.toggle-dark-mode-btn-img {
+    background-image: var(--theme-btn-img);
 }
 
 #dark-mode-btn {
@@ -136,9 +142,10 @@ body {
     border: 1px solid var(--user-input-box);
     border-radius: 5px;
     background-color: var(--user-input-box);
-    margin-top: 25px;
-    padding: 10px 10px;
+    padding: 10px;
     position: relative;
+    height: fit-content;
+    margin: 10px 0px;
     width: auto;
     max-width: 70%;
     justify-self: end;
@@ -159,7 +166,8 @@ body {
     width: 60px;
     height: 40px;
     border-radius: 20px;
-    margin: 0 1rem;
+    margin: 10px 0px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,35 +236,56 @@ body {
 }
 
 .kristaReply {
-    border: 1px solid var(--krista-response-box);
-    border-radius: 5px;
-    background-color: var(--krista-response-box);
-    margin-top: 25px;
-    padding: 10px 10px;
     position: relative;
     width: auto;
     justify-self: start;
+    border: 1px solid var(--krista-response-box);
+    margin: 0px;
 }
 
 .typewriter-container {
-    width: max-content;
+    width: fit-content;
     max-width: 70%;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    background-color: var(--krista-response-box);
+    animation:
+        typing 4.5s steps(50, end);
 }
 
 .typewriter {
     overflow: hidden;
     white-space: nowrap;
-    animation:
-        typing 3.5s steps(40, end);
+    border-right: .1em solid var(--text-color);
+    /* The typwriter cursor */
+    animation: blink-caret .75s step-end infinite;
+    animation-fill-mode: forwards;
+}
+
+.typewriter.done {
+    border-right: none;
 }
 
 /* The typing effect */
 @keyframes typing {
     from {
-        width: 0
+        max-width: 0;
     }
 
     to {
-        width: 100%
+        max-width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-right-color: transparent;
+    }
+
+    50% {
+        border-right-color: var(--text-color);
     }
 }

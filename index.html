@@ -7,25 +7,41 @@
     <title>Plants for Hire</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        if (sessionStorage.getItem("theme") === "dark") {
+        if (localStorage.getItem("theme") === null) {
+            localStorage.setItem("theme", "light")
+        }
+
+        if (localStorage.getItem("theme") === "dark") {
             document.documentElement.classList.add("dark-mode");
         }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (localStorage.getItem("theme") === "dark") {
+                // Set the correct image source before rendering
+                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "../assets/bedge.png";
+            } else {
+                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "../assets/wakege.png";
+            }
+        });
     </script>
 </head>
 
 <body onload="loadTheme()">
-    <button id="dark-mode-btn" onclick="toggleDarkMode()">
-        <img id="dark-mode-btn-img" src="assets/wakege.png" alt="wakege">
-    </button>
-    <a href="./chat/chat.html">
-        <button id="chat-btn">
-            <img id="chat-btn-img" src="assets/chatting.gif" alt="chat">
+    <div id="all-content">
+        <button id="dark-mode-btn" onclick="toggleDarkMode()">
+            <img id="dark-mode-btn-img" src="assets/wakege.png" alt="wakege">
         </button>
-    </a>
-    <div class="main-text">
-        <p id="text">I love Mr.William the <span id="adj-to-replace" onclick="getAdj()"
-                style="text-decoration: underline;">most</span>est</p>
+        <a href="./chat/chat.html">
+            <button id="chat-btn">
+                <img id="chat-btn-img" src="assets/chatting.gif" alt="chat">
+            </button>
+        </a>
+        <div class="main-text">
+            <p id="text">I love Mr.William the <span id="adj-to-replace" onclick="getAdj()"
+                    style="text-decoration: underline;">most</span>est</p>
+        </div>
     </div>
+
     <script src="logic.js">
     </script>
 </body>

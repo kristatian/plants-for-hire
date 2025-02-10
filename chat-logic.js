@@ -21,7 +21,6 @@ function toggleDarkMode() {
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
     localStorage.setItem("icon-path", isDarkMode ? "assets/bedge.png" : "assets/wakege.png");
     img.src = localStorage.getItem("icon-path");
-
 }
 
 async function generateResponse(message) {

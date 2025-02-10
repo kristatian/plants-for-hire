@@ -4,8 +4,7 @@
 window.onload = function () {
     const img = document.getElementById("dark-mode-btn-img");
 
-    console.log("theme is: " + localStorage.getItem("theme"))
-    if (localStorage.getItem("theme") === "light") {
+    if (localStorage.getItem("theme") === null) {
         img.src = "assets/wakege.png";
     } else {
         img.src = localStorage.getItem("icon-path");

@@ -18,9 +18,9 @@
         document.addEventListener("DOMContentLoaded", function () {
             if (localStorage.getItem("theme") === "dark") {
                 // Set the correct image source before rendering
-                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "/assets/bedge.png";
+                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "assets/bedge.png";
             } else {
-                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "/assets/wakege.png";
+                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "assets/wakege.png";
             }
         });
     </script>

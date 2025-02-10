@@ -19,7 +19,7 @@ function toggleDarkMode() {
     // documentElement returns root node (:root)
     const isDarkMode = document.documentElement.classList.toggle("dark-mode");
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-    localStorage.setItem("icon-path", isDarkMode ? "/assets/bedge.png" : "/assets/wakege.png");
+    localStorage.setItem("icon-path", isDarkMode ? "assets/bedge.png" : "assets/wakege.png");
     img.src = localStorage.getItem("icon-path");
 
 }

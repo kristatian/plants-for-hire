@@ -4,7 +4,7 @@
 window.onload = function () {
     const img = document.getElementById("dark-mode-btn-img");
     if (localStorage.getItem("theme") === "light") {
-        img.src = "plants-for-hire/assets/wakege.png";
+        img.src = "/assets/wakege.png";
     } else {
         img.src = localStorage.getItem("icon-path");
     }
@@ -19,7 +19,7 @@ function toggleDarkMode() {
     // documentElement returns root node (:root)
     const isDarkMode = document.documentElement.classList.toggle("dark-mode");
     localStorage.setItem("theme", isDarkMode ? "dark" : "light");
-    localStorage.setItem("icon-path", isDarkMode ? "plants-for-hire/assets/bedge.png" : "plants-for-hire/assets/wakege.png");
+    localStorage.setItem("icon-path", isDarkMode ? "/assets/bedge.png" : "/assets/wakege.png");
     img.src = localStorage.getItem("icon-path");
 
 }

@@ -23,6 +23,16 @@ function toggleDarkMode() {
     img.src = localStorage.getItem("icon-path");
 }
 
+function toggleLoveMode() {
+    if (localStorage.getItem("loveTheme") !== "true") {
+        const isLoveMode = document.documentElement.classList.toggle("love-mode");
+        localStorage.setItem("loveTheme", isLoveMode);
+    } else {
+        const isLoveMode = document.documentElement.classList.toggle("love-mode");
+        localStorage.setItem("loveTheme", isLoveMode);
+    }
+}
+
 function getAdj() {
     colours = ["#f94144", "#f3722c", "#f8961e", "#f9c74f", "#90be6d", "#43aa8b", "#577590", '#e27396', '#ff4800', '#86bbd8', '#9bc53d', '#a06cd5'];
 

@@ -24,6 +24,16 @@ function toggleDarkMode() {
     img.src = localStorage.getItem("icon-path");
 }
 
+function toggleLoveMode() {
+    if (localStorage.getItem("loveTheme") !== "true") {
+        const isLoveMode = document.documentElement.classList.toggle("love-mode");
+        localStorage.setItem("loveTheme", isLoveMode);
+    } else {
+        const isLoveMode = document.documentElement.classList.toggle("love-mode");
+        localStorage.setItem("loveTheme", isLoveMode);
+    }
+}
+
 async function generateResponse(message) {
     var chatbox = document.getElementById("chat-box-content");
     const response = await fetch('responses.json');

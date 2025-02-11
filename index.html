@@ -11,6 +11,10 @@
             document.documentElement.classList.add("dark-mode");
         }
 
+        if (localStorage.getItem("loveTheme") === "true") {
+            document.documentElement.classList.add("love-mode");
+        }
+
         document.addEventListener("DOMContentLoaded", function () {
             if (localStorage.getItem("theme") === "dark") {
                 // Set the correct image source before rendering
@@ -26,6 +30,9 @@
     <div id="all-content">
         <button id="dark-mode-btn" onclick="toggleDarkMode()">
             <img id="dark-mode-btn-img" src="assets/wakege.png" alt="wakege">
+        </button>
+        <button id="love-mode-btn" onclick="toggleLoveMode()">
+            <img id="love-mode-btn-img" src="assets/klee_hug.png" alt="klee_hug">
         </button>
         <a href="chat.html">
             <button id="chat-btn">

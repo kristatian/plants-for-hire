@@ -29,6 +29,19 @@
     --theme-btn-img: url(assets/bedge.png);
 }
 
+.love-mode {
+    --background-color: #da9fb5;
+    --text-color: #2f2529;
+    --button-bg: var(--background-color);
+    --chat-bg: #fedee9;
+    --border-color: var(--background-color);
+    --user-input-box: #d391a0;
+    --krista-response-box: #edc1d2;
+    --bubble-bg: #e3b5c5;
+    --bubble-color: #f0d4de;
+    --theme-btn-img: url(assets/bedge.png);
+}
+
 body {
     font-family: Plants, Tahoma, Geneva, Verdana, sans-serif;
     font-size: large;
@@ -48,6 +61,23 @@ body {
     left: 100%;
     margin-top: 20px;
     margin-left: -80px;
+    border-color: var(--border-color);
+    background-color: var(--button-bg);
+}
+
+#love-mode-btn img {
+    height: 33px;
+}
+
+#love-mode-btn {
+    border-radius: 5px;
+    border-width: 3px;
+    position: fixed;
+    left: 100%;
+    margin-top: 80px;
+    margin-left: -80px;
+    width: 50px;
+    height: 43px;
     border-color: var(--border-color);
     background-color: var(--button-bg);
 }

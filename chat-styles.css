@@ -177,6 +177,7 @@ body {
     height: fit-content;
     margin: 10px 0px;
     width: auto;
+    word-wrap: break-word;
     max-width: 70%;
     justify-self: end;
 }
@@ -229,6 +230,37 @@ body {
     animation-delay: 666ms;
 }
 
+.kristaReply {
+    position: relative;
+    width: auto;
+    justify-self: start;
+    margin: 0px;
+}
+
+.typewriter-container {
+    width: fit-content;
+    max-width: 70%;
+    padding: 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    background-color: var(--krista-response-box);
+    animation:
+        typing 4.5s steps(50, end);
+}
+
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: .1em solid var(--text-color);
+    /* The typwriter cursor */
+    animation: blink-caret .75s step-end infinite;
+    animation-fill-mode: forwards;
+}
+
+.typewriter.done {
+    border-right: none;
+}
+
 @keyframes typing-bubble {
     0% {
         transform: scale(1);
@@ -263,37 +295,6 @@ body {
     100% {
         transform: translateY(0);
     }
-}
-
-.kristaReply {
-    position: relative;
-    width: auto;
-    justify-self: start;
-    margin: 0px;
-}
-
-.typewriter-container {
-    width: fit-content;
-    max-width: 70%;
-    padding: 10px;
-    margin: 10px 0px;
-    border-radius: 5px;
-    background-color: var(--krista-response-box);
-    animation:
-        typing 4.5s steps(50, end);
-}
-
-.typewriter {
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: .1em solid var(--text-color);
-    /* The typwriter cursor */
-    animation: blink-caret .75s step-end infinite;
-    animation-fill-mode: forwards;
-}
-
-.typewriter.done {
-    border-right: none;
 }
 
 /* The typing effect */

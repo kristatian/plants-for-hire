@@ -30,13 +30,13 @@
 }
 
 .love-mode {
-    --background-color: #da9fb5;
-    --text-color: #2f2529;
+    --background-color: #E9B6CA;
+    --text-color: #e7cbd6;
     --button-bg: var(--background-color);
-    --chat-bg: #fedee9;
+    --chat-bg: #D591A8;
     --border-color: var(--background-color);
-    --user-input-box: #d391a0;
-    --krista-response-box: #edc1d2;
+    --user-input-box: #AE4764;
+    --krista-response-box: #C16C86;
     --bubble-bg: #e3b5c5;
     --bubble-color: #f0d4de;
     --theme-btn-img: url(assets/bedge.png);

@@ -18,8 +18,8 @@
 }
 
 .love-mode {
-    --background-color: #da9fb5;
-    --text-color: #2f2529;
+    --background-color: #E9B6CA;
+    --text-color: #AE4764;
     --button-bg: var(--background-color);
     --border-color: var(--background-color);
     --theme-btn-img: url(assets/bedge.png);

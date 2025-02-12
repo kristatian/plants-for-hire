@@ -86,14 +86,20 @@ body {
 }
 
 .main-text {
+    display: grid;
     font-size: 70px;
     font-weight: 600;
     position: fixed;
     top: 50%;
     left: 50%;
-    width: max-content;
+    width: 100vw;
     height: auto;
     transform: translate(-50%, -50%);
+}
+
+#text {
+    text-wrap: auto;
+    justify-self: center;
 }
 
 span {

@@ -13,6 +13,7 @@
     --krista-response-box: #d8dee9;
     --bubble-bg: #e0e0e0;
     --bubble-color: #8d8d8d;
+    --version-color: #d8dee9;
     --theme-btn-img: url(assets/wakege.png);
 }
 
@@ -26,6 +27,7 @@
     --krista-response-box: #2e3440;
     --bubble-bg: #353535;
     --bubble-color: #525252;
+    --version-color: #474a52;
     --theme-btn-img: url(assets/bedge.png);
 }
 
@@ -39,7 +41,8 @@
     --krista-response-box: #C16C86;
     --bubble-bg: #C76C8B;
     --bubble-color: #f0d4de;
-    --theme-btn-img: url(assets/bedge.png);
+    --version-color: #f0d4de;
+    --version-text: #AE4764;
 }
 
 body {
@@ -259,6 +262,54 @@ body {
 
 .typewriter.done {
     border-right: none;
+}
+
+#version-slider {
+    font-size: 20px;
+    color: var(--version-text);
+    display: flex;
+    position: fixed;
+    margin: 0;
+    padding: 5px;
+    bottom: 1em;
+    right: 1em;
+    height: max-content;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#version-icon {
+    cursor: pointer;
+    align-self: center;
+    padding: 5px;
+    height: fit-content;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.text-wrapper {
+    position: relative;
+    width: 180px;
+    height: 54px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#version-text {
+    white-space: nowrap;
+    position: absolute;
+    right: -150px;
+    width: max-content;
+    padding: 10px;
+    margin: 0;
+    transition: 1s;
+}
+
+#version-slider:hover #version-text {
+    transition: 1s;
+    right: 10px;
+    background: var(--version-color);
+    border-radius: 10px;
 }
 
 @keyframes typing-bubble {

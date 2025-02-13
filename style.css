@@ -8,6 +8,7 @@
     --text-color: #2e3440;
     --button-bg: var(--background-color);
     --border-color: var(--background-color);
+    --version-color: #d8dee9;
 }
 
 .dark-mode {
@@ -15,6 +16,7 @@
     --text-color: #eceff4;
     --button-bg: var(--background-color);
     --border-color: var(--background-color);
+    --version-color: #474a52;
 }
 
 .love-mode {
@@ -22,7 +24,7 @@
     --text-color: #AE4764;
     --button-bg: var(--background-color);
     --border-color: var(--background-color);
-    --theme-btn-img: url(assets/bedge.png);
+    --version-color: #f0d4de;
 }
 
 body {
@@ -97,4 +99,51 @@ span {
 
 .loadest {
     align-self: center;
+}
+
+#version-slider {
+    font-size: 20px;
+    display: flex;
+    position: fixed;
+    margin: 0;
+    padding: 5px;
+    bottom: 1em;
+    right: 1em;
+    height: max-content;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#version-icon {
+    cursor: pointer;
+    align-self: center;
+    padding: 5px;
+    height: fit-content;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.text-wrapper {
+    position: relative;
+    width: 180px;
+    height: 54px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#version-text {
+    white-space: nowrap;
+    position: absolute;
+    right: -150px;
+    width: max-content;
+    padding: 10px;
+    margin: 0;
+    transition: 1s;
+}
+
+#version-slider:hover #version-text {
+    transition: 1s;
+    right: 10px;
+    background: var(--version-color);
+    border-radius: 10px;
 }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datedle</title>
+    <link rel="stylesheet" href="datedle-styles.css">
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark-mode");
+        }
+
+        if (localStorage.getItem("loveTheme") === "true") {
+            document.documentElement.classList.add("love-mode");
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            if (localStorage.getItem("theme") === "dark") {
+                // Set the correct image source before rendering
+                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "assets/bedge.png";
+            } else {
+                document.getElementById("dark-mode-btn-img").src = localStorage.getItem("icon-path") || "assets/wakege.png";
+            }
+        });
+    </script>
+</head>
+
+<body onload="loadTheme()">
+    <button id="dark-mode-btn" onclick="toggleDarkMode()">
+        <img id="dark-mode-btn-img" src="assets/wakege.png" alt="wakege">
+    </button>
+    <button id="love-mode-btn" onclick="toggleLoveMode()">
+        <img id="love-mode-btn-img" src="assets/klee_hug.png" alt="klee_hug">
+    </button>
+    <a href="chat.html">
+        <button id="chat-btn">
+            <img id="chat-btn-img" src="assets/chatting.gif" alt="chat">
+        </button>
+    </a>
+    <div id="game-container">
+        <img id="main-img" src="../assets/datedle-photos/good-catch.JPEG" alt="food">
+        <input id="guess-input" type="text" placeholder="Type guess here">
+        <div id="game-table">
+            <table>
+                <div id="game-headers">
+                    <tr>
+                        <th>Restaurant</th>
+                        <th>Date Visited</th>
+                        <th>Number of Vists</th>
+                        <th>Cuisine</th>
+                    </tr>
+                </div>
+                <div id="game-answers">
+                    <tr>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                    </tr>
+                </div>
+            </table>
+    
+        </div>
+    </div>
+    <!-- <div id="rules">
+        <p>
+            please note i had to generalize some information (such as times we've visited), otherwise it would've taken
+            me
+            way too long.
+            <br>
+            notes per category:
+        <ul>
+            <li>
+                location: this is generally areas within the GTA. If it's outside of GTA, it will just be the city name
+                such
+                as Hamilton
+            </li>
+            <li>
+                date visited: this is the date when the specific photo was taken. not necessarily the first or most
+                recent
+                time we went
+            </li>
+            <li>
+                number of visits: once (1), a couple of times (2-10), or often (10+)
+            </li>
+            <li>
+                cuisine: just the cuisine or the type of store (such as: korean, japanese, chinese, BBT, cafe)
+            </li>
+            <li>bonus: which day of the week did we visit?</li>
+        </ul>
+        </p>
+    </div> -->
+    <div id="version-slider">
+        <div class="text-wrapper">
+            <p id="version-text">
+                version 1.0 <br>
+                valentine's edition
+            </p>
+        </div>
+        <p id="version-icon">♡</p>
+    </div>
+    <script src="datedle-logic.js">
+    </script>
+</body>
+
+</html>

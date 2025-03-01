@@ -1,0 +1,169 @@
+@font-face {
+    font-family: Plants;
+    src: url('assets/fonts/PlantsRegrown-Regular.ttf') format("truetype");
+}
+
+:root {
+    --background-color: #eceff4;
+    --text-color: #2e3440;
+    --button-bg: var(--background-color);
+    --border-color: var(--background-color);
+    --version-color: #d8dee9;
+}
+
+.dark-mode {
+    --background-color: #2e3440;
+    --text-color: #eceff4;
+    --button-bg: var(--background-color);
+    --border-color: var(--background-color);
+    --version-color: #474a52;
+}
+
+.love-mode {
+    --background-color: #E9B6CA;
+    --text-color: #AE4764;
+    --button-bg: var(--background-color);
+    --border-color: var(--background-color);
+    --version-color: #f0d4de;
+}
+
+#dark-mode-btn {
+    border-radius: 5px;
+    border-width: 3px;
+    position: fixed;
+    left: 100%;
+    margin-top: 20px;
+    margin-left: -80px;
+    border-color: var(--border-color);
+    background-color: var(--button-bg);
+}
+
+#love-mode-btn img {
+    height: 33px;
+}
+
+#love-mode-btn {
+    border-radius: 5px;
+    border-width: 3px;
+    position: fixed;
+    left: 100%;
+    margin-top: 80px;
+    margin-left: -80px;
+    width: 50px;
+    height: 43px;
+    border-color: var(--border-color);
+    background-color: var(--button-bg);
+}
+
+#chat-btn {
+    border-radius: 5px;
+    border-width: 3px;
+    position: fixed;
+    left: 1%;
+    margin-top: 20px;
+    border-color: var(--border-color);
+    background-color: var(--button-bg);
+}
+
+body {
+    font-family: Plants, Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#dark-mode-btn {
+    border-radius: 5px;
+    border-width: 3px;
+    position: fixed;
+    left: 100%;
+    margin-top: 20px;
+    margin-left: -80px;
+    border-color: #eceff4;
+}
+
+#game-container {
+    display: flex;
+    height: auto;
+    width: auto;
+    align-items: center;
+    flex-direction: column;
+}
+
+#main-img {
+    width: 300px;
+    padding: 40px 0;
+}
+
+#guess-input {
+    width: auto;
+}
+
+#game-table {
+    height: max-content;
+    width: max-content;
+    padding: 30px 0;
+}
+
+#game-headers {
+    background-color: blue;
+}
+
+#game-table th {
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+}
+
+#game-answers {
+    background-color: yellow;
+}
+
+#version-slider {
+    font-size: 20px;
+    display: flex;
+    position: fixed;
+    margin: 0;
+    padding: 5px;
+    bottom: 1em;
+    right: 1em;
+    height: max-content;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#version-icon {
+    cursor: pointer;
+    align-self: center;
+    padding: 5px;
+    height: fit-content;
+    border-radius: 10px;
+    margin: 0;
+}
+
+.text-wrapper {
+    position: relative;
+    width: 180px;
+    height: 54px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#version-text {
+    white-space: nowrap;
+    position: absolute;
+    right: -150px;
+    width: max-content;
+    padding: 10px;
+    margin: 0;
+    transition: 1s;
+}
+
+#version-slider:hover #version-text {
+    transition: 1s;
+    right: 10px;
+    background: var(--version-color);
+    border-radius: 10px;
+}

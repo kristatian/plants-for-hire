@@ -1,5 +1,4 @@
 // https://kristatian.github.io/plants-for-hire/
-// faker faker baby maker --> liar liar plants for hire
 
 window.onload = function () {
     const img = document.getElementById("dark-mode-btn-img");
@@ -33,3 +32,16 @@ function toggleLoveMode() {
     }
 }
 
+var currentPicture = '';
+
+document.getElementById('form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    var guess = document.getElementById('guess-input').value;
+    checkGuess(guess);
+})
+
+function checkGuess(guess) {
+    console.log('checking: ', guess);
+    
+
+}

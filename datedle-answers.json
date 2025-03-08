@@ -1,10 +1,20 @@
 {
-    "good catch cafe": {
-        "location": "north york",
-        "date visited": "Jan 24, 2025",
-        "number of visits": "1",
-        "cuisine": "hong kong style",
-        "day of week": "friday",
-        "src": "assets/red-heart.png"
-    }
+  "good catch cafe": {
+    "name": "good catch cafe",
+    "location": "north york",
+    "date visited": "Jan 24, 2025",
+    "number of visits": "1",
+    "cuisine": "hong kong style",
+    "day of week": "friday",
+    "src": "assets/datedle-photos/good-catch.jpeg"
+  },
+  "fresh burger": {
+    "name": "fresh burger",
+    "location": "toronto",
+    "date visited": "--",
+    "number of visits": "1",
+    "cuisine": "american",
+    "day of week": "--",
+    "src": "assets/red-heart.png"
+  }
 }

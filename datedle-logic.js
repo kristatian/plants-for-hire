@@ -42,6 +42,12 @@ document.getElementById('form').addEventListener('submit', (event) => {
 
 function checkGuess(guess) {
     console.log('checking: ', guess);
-    
-
+    fetch('datedle-answers.json').then(response => {
+        return response.json();
+    }).then(data => {
+        console.log(data);
+        document.getElementById('main-img').src = data["good catch cafe"].src;
+    }).catch(err => {
+        console.log(err);
+    });
 }

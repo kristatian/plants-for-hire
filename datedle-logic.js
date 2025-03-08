@@ -57,6 +57,8 @@ function checkGuess(guess) {
         threshold: 0.3, // Adjust for more/less strict matching
       });
 
+      // fuzzy search should actually be for filtering drop down options shown under input box
+      // probably need to change back to list.js LOL
       const results = answers.search(guess);
       const matchedNames = results.map((result) => result.item.name);
       updateBoard(matchedNames);
@@ -69,7 +71,13 @@ function checkGuess(guess) {
 function updateBoard(matches) {
   if (matches.length > 0) {
     console.log('updating board');
+    // get the associated data in json file for the matched answer
+
+    // need to check against actual answer and adjust each <th> background-color based on proximity of answer
+
+    // create and push new <th> to table list
   } else {
     console.log('no results found');
+    // do nothing, show "no results found"
   }
 }

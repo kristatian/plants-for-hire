@@ -100,25 +100,24 @@ body {
 }
 
 #game-table {
+    display: grid;
     height: max-content;
     width: max-content;
     padding: 30px 0;
 }
 
-#game-headers {
-    background-color: blue;
-}
-
-#game-table th {
-    padding: 10px;
+#game-headers th {
+    padding: 20px;
     border: 1px solid var(--text-color);
     border-radius: 5px;
     width: 100px;
     height: 50px;
 }
 
-#game-answers {
-    background-color: yellow;
+#game-answers th {
+    padding: 20px;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
 }
 
 #version-slider {

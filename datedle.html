@@ -41,32 +41,24 @@
         </button>
     </a>
     <div id="game-container">
-        <img id="main-img" src="assets/datedle-photos/good-catch.JPEG" alt="food">
+        <img id="main-img" src="" alt="food">
         <form id="form">
-            <input id="guess-input" placeholder="Type guess here" type="text">
+            <input id="guess-input" placeholder="Type guess here" type="text" list="answer-option-list">
+            <datalist id="answer-option-list">
+                <option value="good catch cafe">
+                <option value="fresh burger">
+            </datalist>
             <button id="guess-input-btn" type="submit">Submit</button>
         </form>
-        <div id="game-table">
-            <table>
-                <div id="game-headers">
-                    <tr>
-                        <th>Restaurant</th>
-                        <th>Date Visited</th>
-                        <th>Number of Vists</th>
-                        <th>Cuisine</th>
-                    </tr>
-                </div>
-                <div id="game-answers">
-                    <tr>
-                        <th>1</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>4</th>
-                    </tr>
-                </div>
-            </table>
-    
-        </div>
+
+        <table id="game-table">
+            <tr id="game-headers">
+                <th>Restaurant</th>
+                <th>Date Visited</th>
+                <th>Number of Vists</th>
+                <th>Cuisine</th>
+            </tr>
+        </table>
     </div>
     <!-- <div id="rules">
         <p>

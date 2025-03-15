@@ -43,29 +43,34 @@
     <div id="game-container">
         <img id="main-img" src="assets/datedle-photos/good-catch.JPEG" alt="food">
         <form id="form">
-            <input id="guess-input" placeholder="Type guess here" type="text">
+            <input id="guess-input" placeholder="Type guess here" type="text" list="restaurant-names" onkeydown="if(event.keyCode === 13) {
+                 return false;}">
+            <datalist class="list" id="restaurant-names">
+                <option class="restaurant" value="Good Catch Cafe"></option>
+                <option class="restaurant" value="Fresh Burger"></option>
+                <option class="restaurant" value="Pho 88"></option>
+                <option class="restaurant" value="Pho Anh Vu"></option>
+                <option class="restaurant" value="Joey Markville"></option>
+                <option class="restaurant" value="Fox on John"></option>
+                <option class="restaurant" value="Elephant & Castle"></option>
+                <option class="restaurant" value="Elephant and Grind Coffee"></option>
+            </datalist>
             <button id="guess-input-btn" type="submit">Submit</button>
         </form>
         <div id="game-table">
             <table>
-                <div id="game-headers">
+                <thead id="game-headers">
                     <tr>
                         <th>Restaurant</th>
                         <th>Date Visited</th>
                         <th>Number of Vists</th>
                         <th>Cuisine</th>
                     </tr>
-                </div>
-                <div id="game-answers">
-                    <tr>
-                        <th>1</th>
-                        <th>2</th>
-                        <th>3</th>
-                        <th>4</th>
-                    </tr>
-                </div>
+                </thead>
+                <tbody id="game-answers">
+                </tbody>
             </table>
-    
+
         </div>
     </div>
     <!-- <div id="rules">

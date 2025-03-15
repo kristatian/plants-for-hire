@@ -35,12 +35,12 @@ function toggleLoveMode() {
   }
 }
 
-var currentPicture = "";
+var currentPicture = "good catch cafe";
 
 document.getElementById("form").addEventListener("submit", (event) => {
   event.preventDefault();
   var guess = document.getElementById("guess-input").value;
-  checkGuess(guess);
+  checkGuess(guess.toLowerCase());
 });
 
 function checkGuess(guess) {
@@ -51,33 +51,41 @@ function checkGuess(guess) {
     })
     .then((data) => {
       const restaurantArray = Object.keys(data).map((name) => ({ name }));
+      console.log(restaurantArray);
+      const isCorrect = guess === currentPicture;
 
-      const answers = new Fuse(restaurantArray, {
-        keys: ["name"], // Search by the "name" field
-        threshold: 0.3, // Adjust for more/less strict matching
+      var guessRow = document.createElement("tr");
+
+      var guessValues = [
+        guess,
+        data[guess]["date visited"],
+        data[guess]["number of visits"],
+        data[guess]["cuisine"],
+      ];
+
+      var correctValues = [
+        currentPicture,
+        data[currentPicture]["date visited"],
+        data[currentPicture]["number of visits"],
+        data[currentPicture]["cuisine"],
+      ];
+
+      guessValues.forEach((value, index) => {
+        var cell = document.createElement("th");
+        cell.innerHTML = value;
+        if (value === correctValues[index]) {
+          console.log("correct guess");
+          cell.style.backgroundColor = "green";
+        } else {
+          console.log("incorrect guess");
+          cell.style.backgroundColor = "red";
+        }
+        guessRow.appendChild(cell);
       });
 
-      // fuzzy search should actually be for filtering drop down options shown under input box
-      // probably need to change back to list.js LOL
-      const results = answers.search(guess);
-      const matchedNames = results.map((result) => result.item.name);
-      updateBoard(matchedNames);
+      document.getElementById("game-answers").appendChild(guessRow);      
     })
     .catch((err) => {
       console.log(err);
     });
-}
-
-function updateBoard(matches) {
-  if (matches.length > 0) {
-    console.log('updating board');
-    // get the associated data in json file for the matched answer
-
-    // need to check against actual answer and adjust each <th> background-color based on proximity of answer
-
-    // create and push new <th> to table list
-  } else {
-    console.log('no results found');
-    // do nothing, show "no results found"
-  }
 }

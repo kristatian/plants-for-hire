@@ -11,10 +11,10 @@
   "fresh burger": {
     "name": "fresh burger",
     "location": "toronto",
-    "date visited": "--",
+    "date visited": "1",
     "number of visits": "1",
     "cuisine": "american",
-    "day of week": "--",
+    "day of week": "saturday",
     "src": "assets/red-heart.png"
   }
 }

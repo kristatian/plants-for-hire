@@ -100,6 +100,7 @@ body {
 }
 
 #game-table {
+    display: grid;
     height: max-content;
     width: max-content;
     padding: 30px 0;

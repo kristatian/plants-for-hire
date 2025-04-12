@@ -85,7 +85,7 @@ body {
     background-color: var(--button-bg);
 }
 
-#chat-btn {
+#home-btn {
     border-radius: 5px;
     border-width: 3px;
     position: fixed;
@@ -95,12 +95,12 @@ body {
     background-color: var(--button-bg);
 }
 
-#home-btn {
+#datedle-btn {
     border-radius: 5px;
     border-width: 3px;
     position: fixed;
     left: 1%;
-    margin-top: 20px;
+    margin-top: 80px;
     border-color: var(--border-color);
     background-color: var(--button-bg);
 }

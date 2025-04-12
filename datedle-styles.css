@@ -1,162 +1,270 @@
 @font-face {
-    font-family: Plants;
-    src: url('assets/fonts/PlantsRegrown-Regular.ttf') format("truetype");
+  font-family: Plants;
+  src: url("assets/fonts/PlantsRegrown-Regular.ttf") format("truetype");
 }
 
 :root {
-    --background-color: #eceff4;
-    --text-color: #2e3440;
-    --button-bg: var(--background-color);
-    --border-color: var(--background-color);
-    --version-color: #d8dee9;
+  --background-color: #eceff4;
+  --text-color: #2e3440;
+  --button-bg: var(--background-color);
+  --border-color: var(--background-color);
+  --version-color: #d8dee9;
+  --bonus-background-color: #b9c4d5;
 }
 
 .dark-mode {
-    --background-color: #2e3440;
-    --text-color: #eceff4;
-    --button-bg: var(--background-color);
-    --border-color: var(--background-color);
-    --version-color: #474a52;
+  --background-color: #2e3440;
+  --text-color: #eceff4;
+  --button-bg: var(--background-color);
+  --border-color: var(--background-color);
+  --version-color: #474a52;
+  --bonus-background-color: #1b1e25;
 }
 
 .love-mode {
-    --background-color: #E9B6CA;
-    --text-color: #AE4764;
-    --button-bg: var(--background-color);
-    --border-color: var(--background-color);
-    --version-color: #f0d4de;
+  --background-color: #e9b6ca;
+  --text-color: #ae4764;
+  --button-bg: var(--background-color);
+  --border-color: var(--background-color);
+  --version-color: #f0d4de;
+  --bonus-background-color: #e18fb0;
 }
 
 #dark-mode-btn {
-    border-radius: 5px;
-    border-width: 3px;
-    position: fixed;
-    left: 100%;
-    margin-top: 20px;
-    margin-left: -80px;
-    border-color: var(--border-color);
-    background-color: var(--button-bg);
+  border-radius: 5px;
+  border-width: 3px;
+  position: fixed;
+  left: 100%;
+  margin-top: 20px;
+  margin-left: -80px;
+  border-color: var(--border-color);
+  background-color: var(--button-bg);
 }
 
 #love-mode-btn img {
-    height: 33px;
+  height: 33px;
 }
 
 #love-mode-btn {
-    border-radius: 5px;
-    border-width: 3px;
-    position: fixed;
-    left: 100%;
-    margin-top: 80px;
-    margin-left: -80px;
-    width: 50px;
-    height: 43px;
-    border-color: var(--border-color);
-    background-color: var(--button-bg);
+  border-radius: 5px;
+  border-width: 3px;
+  position: fixed;
+  left: 100%;
+  margin-top: 80px;
+  margin-left: -80px;
+  width: 50px;
+  height: 43px;
+  border-color: var(--border-color);
+  background-color: var(--button-bg);
 }
 
 #chat-btn {
-    border-radius: 5px;
-    border-width: 3px;
-    position: fixed;
-    left: 1%;
-    margin-top: 20px;
-    border-color: var(--border-color);
-    background-color: var(--button-bg);
+  border-radius: 5px;
+  border-width: 3px;
+  position: fixed;
+  left: 1%;
+  margin-top: 20px;
+  border-color: var(--border-color);
+  background-color: var(--button-bg);
+}
+
+#home-btn {
+  border-radius: 5px;
+  border-width: 3px;
+  position: fixed;
+  left: 1%;
+  margin-top: 80px;
+  border-color: var(--border-color);
+  background-color: var(--button-bg);
 }
 
 body {
-    font-family: Plants, Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: Plants, Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #dark-mode-btn {
-    border-radius: 5px;
-    border-width: 3px;
-    position: fixed;
-    left: 100%;
-    margin-top: 20px;
-    margin-left: -80px;
-    border-color: #eceff4;
+  border-radius: 5px;
+  border-width: 3px;
+  position: fixed;
+  left: 100%;
+  margin-top: 20px;
+  margin-left: -80px;
+  border-color: var(--background-color);
 }
 
 #game-container {
-    display: flex;
-    height: auto;
-    width: auto;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  height: auto;
+  width: auto;
+  align-items: center;
+  flex-direction: column;
 }
 
 #main-img {
-    width: 300px;
-    padding: 40px 0;
+  width: 400px;
+  padding: 40px 0;
+}
+
+#form {
+  width: 30%;
+  text-align: center;
 }
 
 #guess-input {
-    width: auto;
+  width: 70%;
+  height: 30px;
+  margin-right: 5px;
+}
+
+#bonus-guess-input {
+  width: 50%;
+  height: 30px;
+}
+
+#guess-input-btn {
+  height: 35px;
+  margin: 0 auto;
 }
 
 #game-table {
-    display: grid;
-    height: max-content;
-    width: max-content;
-    padding: 30px 0;
+  display: grid;
+  height: max-content;
+  width: max-content;
+  font-size: 20px;
+  padding: 30px 0;
 }
 
 #game-table th {
-    padding: 10px;
-    border: 1px solid var(--text-color);
-    border-radius: 5px;
-    width: 100px;
-    height: 50px;
+  padding: 10px;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  width: 100px;
+  height: 50px;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  top: 0;
+  left: 0;
+  overflow: none; /* Enable scroll if needed */
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.modal-content {
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 30px;
+  border: 1px solid var(--bonus-background-color);
+  border-radius: 10px;
+  width: 30%; /* Could be more or less, depending on screen size */
+  text-align: center;
+  background-color: var(--bonus-background-color);
+}
+
+#bonus-question {
+  border: var(--version-color) 3px solid;
+  background-color: var(--version-color);
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 35px;
+}
+
+#bonus-guess-answer {
+  font-size: 20px;
+}
+
+.close {
+  color: var(--background-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#playagain-yes {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 80px;
+  color: var(--text-color);
+  border-color: var(--border-color);
+  background-color: var(--button-bg);
+}
+
+#playagain-no {
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  margin-left: 10px;
+  width: 80px;
+  color: var(--text-color);
+  border-color: var(--border-color);
+  background-color: var(--button-bg);
 }
 
 #version-slider {
-    font-size: 20px;
-    display: flex;
-    position: fixed;
-    margin: 0;
-    padding: 5px;
-    bottom: 1em;
-    right: 1em;
-    height: max-content;
-    border-radius: 10px;
-    overflow: hidden;
+  font-size: 20px;
+  display: flex;
+  position: fixed;
+  margin: 0;
+  padding: 5px;
+  bottom: 1em;
+  right: 1em;
+  height: max-content;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 #version-icon {
-    cursor: pointer;
-    align-self: center;
-    padding: 5px;
-    height: fit-content;
-    border-radius: 10px;
-    margin: 0;
+  cursor: pointer;
+  align-self: center;
+  padding: 5px;
+  height: fit-content;
+  border-radius: 10px;
+  margin: 0;
 }
 
 .text-wrapper {
-    position: relative;
-    width: 180px;
-    height: 54px;
-    overflow: hidden;
-    white-space: nowrap;
+  position: relative;
+  width: 180px;
+  height: 54px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #version-text {
-    white-space: nowrap;
-    position: absolute;
-    right: -150px;
-    width: max-content;
-    padding: 10px;
-    margin: 0;
-    transition: 1s;
+  white-space: nowrap;
+  position: absolute;
+  right: -150px;
+  width: max-content;
+  padding: 10px;
+  margin: 0;
+  transition: 1s;
 }
 
 #version-slider:hover #version-text {
-    transition: 1s;
-    right: 10px;
-    background: var(--version-color);
-    border-radius: 10px;
+  transition: 1s;
+  right: 10px;
+  background: var(--version-color);
+  border-radius: 10px;
 }
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+  }

@@ -25,6 +25,7 @@
         });
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 
 </head>
 
@@ -35,6 +36,11 @@
     <button id="love-mode-btn" onclick="toggleLoveMode()">
         <img id="love-mode-btn-img" src="assets/klee_hug.png" alt="klee_hug">
     </button>
+    <a href="index.html">
+        <button id="home-btn">
+            <img id="home-btn-img" src="assets/hypers.png" alt="homepage">
+        </button>
+    </a>
     <a href="chat.html">
         <button id="chat-btn">
             <img id="chat-btn-img" src="assets/chatting.gif" alt="chat">
@@ -48,12 +54,16 @@
             <datalist class="list" id="restaurant-names">
                 <option class="restaurant" value="Good Catch Cafe"></option>
                 <option class="restaurant" value="Fresh Burger"></option>
-                <option class="restaurant" value="Pho 88"></option>
+                <option class="restaurant" value="Gyubee"></option>
                 <option class="restaurant" value="Pho Anh Vu"></option>
-                <option class="restaurant" value="Joey Markville"></option>
+                <option class="restaurant" value="Sansotei Ramen"></option>
                 <option class="restaurant" value="Fox on John"></option>
-                <option class="restaurant" value="Elephant & Castle"></option>
-                <option class="restaurant" value="Elephant and Grind Coffee"></option>
+                <option class="restaurant" value="Kinton Ramen"></option>
+                <option class="restaurant" value="IKEA"></option>
+                <option class="restaurant" value="Saint James"></option>
+                <option class="restaurant" value="Madame Saigon"></option>
+                <option class="restaurant" value="Nome Izakaya"></option>
+                <option class="restaurant" value="New Generation Sushi"></option>
             </datalist>
             <button id="guess-input-btn" type="submit">Submit</button>
         </form>
@@ -73,6 +83,45 @@
 
         </div>
     </div>
+    <div id="play-again-modal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <br>
+            <h1>You got it! Would you like to play again?</h1>
+            <br>
+            <button id="playagain-yes" onclick=generateNewPicture()>Yes</button>
+            <button id="playagain-no" onclick="">No</button>
+            <div id="bonus-question">
+                <h2 style="text-decoration: underline;">Bonus Question:</h2>
+                <h2>Which day of the week did we go?</h2>
+                <form id="bonus-form">
+                    <input id="bonus-guess-input" placeholder="Type guess here" type="text" list="days-of-week"
+                        onkeydown="if(event.keyCode === 13) {
+                     return false;}">
+                    <datalist class="list" id="days-of-week">
+                        <option class="day" value="Monday"></option>
+                        <option class="day" value="Tuesday"></option>
+                        <option class="day" value="Wednesday"></option>
+                        <option class="day" value="Thursday"></option>
+                        <option class="day" value="Friday"></option>
+                        <option class="day" value="Saturday"></option>
+                        <option class="day" value="Sunday"></option>
+                    </datalist>
+                    <button id="guess-input-btn" type="submit">Submit</button>
+                </form>
+                <div id="bonus-guess-answer">
+                    <p id="bonus-guess">You guessed:</p>
+                    <!-- append guess here -->
+                    <p id="bonus-answer">Correct answer:</p>
+                    <!-- show correct answer if wrong -->
+                </div>
+            </div>
+            <br>
+        </div>
+
+    </div>
+
     <!-- <div id="rules">
         <p>
             please note i had to generalize some information (such as times we've visited), otherwise it would've taken
@@ -104,8 +153,8 @@
     <div id="version-slider">
         <div class="text-wrapper">
             <p id="version-text">
-                version 1.0 <br>
-                valentine's edition
+                version 2.0 <br>
+                birthday edition
             </p>
         </div>
         <p id="version-icon">♡</p>

@@ -1,8 +1,8 @@
 {
   "good catch cafe": {
     "name": "good catch cafe",
-    "location": "north york",
-    "date visited": "Jan 24, 2025",
+    "location": "toronto",
+    "date visited": "Jan 24 2025",
     "number of visits": "1",
     "cuisine": "hong kong style",
     "day of week": "friday",
@@ -11,10 +11,91 @@
   "fresh burger": {
     "name": "fresh burger",
     "location": "toronto",
-    "date visited": "1",
+    "date visited": "Dec 21 2024",
     "number of visits": "1",
     "cuisine": "american",
     "day of week": "saturday",
-    "src": "assets/red-heart.png"
+    "src": "assets/datedle-photos/fresh-burger.jpeg"
+  },
+  "fox on john": {
+    "name": "fox on john",
+    "location": "toronto",
+    "date visited": "Sep 4 2024",
+    "number of visits": "1",
+    "cuisine": "american",
+    "day of week": "saturday",
+    "src": "assets/datedle-photos/fox-on-john-1.jpeg"
+  },
+  "ikea": {
+    "name": "ikea",
+    "location": "toronto",
+    "date visited": "Dec 21 2024",
+    "number of visits": "3",
+    "cuisine": "swedish",
+    "day of week": "saturday",
+    "src": "assets/datedle-photos/ikea.jpeg"
+  },
+  "gyubee": {
+    "name": "gyubee",
+    "location": "toronto",
+    "date visited": "Dec 23 2023",
+    "number of visits": "2",
+    "cuisine": "japanese",
+    "day of week": "saturday",
+    "src": "assets/datedle-photos/gyubee.jpeg"
+  },
+  "sansotei ramen": {
+    "name": "sansotei ramen",
+    "location": "toronto",
+    "date visited": "Oct 19 2024",
+    "number of visits": "3",
+    "cuisine": "japanese",
+    "day of week": "saturday",
+    "src": "assets/datedle-photos/sansotei-ramen-2.jpeg"
+  },
+  "kinton ramen": {
+    "name": "kinton ramen",
+    "location": "toronto",
+    "date visited": "Jun 22 2024",
+    "number of visits": "1",
+    "cuisine": "japanese",
+    "day of week": "saturday",
+    "src": "assets/datedle-photos/kinton-ramen.jpeg"
+  },
+  "new generation sushi": {
+    "name": "new generation sushi",
+    "location": "toronto",
+    "date visited": "Dec 14 2024",
+    "number of visits": "1",
+    "cuisine": "japanese",
+    "day of week": "saturday",
+    "src": "assets/datedle-photos/new-generation-sushi.jpeg"
+  },
+  "nome izakaya": {
+    "name": "nome izakaya",
+    "location": "toronto",
+    "date visited": "Mar 13 2024",
+    "number of visits": "1",
+    "cuisine": "japanese",
+    "day of week": "wednesday",
+    "src": "assets/datedle-photos/nome-izakaya.jpeg"
+  },
+  "madame saigon": {
+    "name": "madame saigon",
+    "location": "toronto",
+    "date visited": "Jun 8 2024",
+    "number of visits": "1",
+    "cuisine": "vietnamese",
+    "day of week": "saturday",
+    "src": "assets/datedle-photos/madame-saigon.jpeg"
+  },
+  "saint james": {
+    "name": "saint james",
+    "location": "hamilton",
+    "date visited": "Aug 31 2024",
+    "number of visits": "1",
+    "cuisine": "american",
+    "day of week": "saturday",
+    "src": "assets/datedle-photos/saint-james.jpeg"
   }
 }

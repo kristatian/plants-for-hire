@@ -72,6 +72,16 @@ body {
     background-color: var(--button-bg);
 }
 
+#datedle-btn {
+    border-radius: 5px;
+    border-width: 3px;
+    position: fixed;
+    left: 1%;
+    margin-top: 80px;
+    border-color: var(--border-color);
+    background-color: var(--button-bg);
+}
+
 #adj-to-replace {
     cursor: pointer;
 }
